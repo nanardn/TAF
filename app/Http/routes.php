@@ -26,5 +26,5 @@ Route::get('/api/crowd-report', 'ApiController@crowdReport');
 		// menampilkan detail laporan harian
 Route::get('/dashboard/detail_laporan_crowdfunding/{id}','crowdController@detailReport');
 				//menampilkan tabel harian
-Route::post('/uploaddetaillaporan','crowdController@uploadpendanaan');
+Route::post('/uploaddetaillaporan','crowdController@uploaddetaillaporan');
 		

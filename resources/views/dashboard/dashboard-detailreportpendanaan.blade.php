@@ -20,7 +20,7 @@
 			<div class="content">
 			<table id="myTable" border="0" >
 			<div class="content" width="100">
-				<form action="#" method="post" enctype="multipart/form-data">
+				<form action="{{ URL::to('uploaddetaillaporan') }}" method="post" enctype="multipart/form-data">
 					{!! csrf_field() !!}
 
 					<input type="hidden" value="0" name="sementara_dana">
@@ -75,7 +75,6 @@
 							
 						</tr>
 					</thead>
-					
 					<tbody>
 						@foreach($detailDana['data'] as $rc)		
 						
@@ -96,4 +95,3 @@
 	@endif
 	
 @endsection
-
