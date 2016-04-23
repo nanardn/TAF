@@ -18,8 +18,13 @@ Route::auth();
 //Halaman Welcome
 Route::get('/home', 'HomeController@index');
 //laporan bulanan
-Route::get('/dashboard/showReportPendanaan','crowdController@listReportCrowd');
+
 Route::get('/dashboard/pendanaan/{id}','crowdController@index');
-Route::get('/dashboard/showReportCrowdfunding','crowdController@showReport');
-
-
+Route::get('/dashboard/showReportPendanaan','crowdController@listReportCrowd');
+		//menampilkan grafik
+Route::get('/api/crowd-report', 'ApiController@crowdReport');
+		// menampilkan detail laporan harian
+Route::get('/dashboard/detail_laporan_crowdfunding/{id}','crowdController@detailReport');
+				//menampilkan tabel harian
+Route::post('/uploaddetaillaporan','crowdController@uploadpendanaan');
+		
