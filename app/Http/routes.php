@@ -19,6 +19,8 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 //laporan bulanan
 
+Route::post('/createlaporancrowd','crowdController@createLaporanCrowd');
+
 Route::get('/dashboard/pendanaan/{id}','crowdController@index');
 Route::get('/dashboard/showReportPendanaan','crowdController@listReportCrowd');
 		//menampilkan grafik

@@ -57,7 +57,7 @@
 				<form action="{{ URL::to('createlaporancrowd') }}" method="post" enctype="multipart/form-data">
 					{!! csrf_field() !!}
                     Nama Proyek 	:
-					<select name="campaign">
+					<select name="id_pendanaan">
 			 			@foreach ($campaigns as $k => $v)
 			 				<option value="{{ $k }}">{{ $v }}</option>
 			 			@endforeach
@@ -81,7 +81,7 @@
 					<br><br><br/>
 					Tahun 		:
 					
-					<select name="year">
+					<select name="tahun">
 			 			@foreach ($years as $year)
 			 				<option value="{{ $year }}">{{ $year }}</option>
 			 			@endforeach

@@ -12,6 +12,13 @@ use DB;
 
 class crowdController extends Controller
 {
+    public function createLaporanCrowd(Request $request) {
+        $crowdReport = new CrowdReport();
+        $crowdReport->fill($request->all());
+        $crowdReport->save();
+
+        return redirect()->back();
+    }
     //
      public function index()
     {
