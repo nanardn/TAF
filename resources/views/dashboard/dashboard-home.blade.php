@@ -10,10 +10,16 @@
 
 		<nav>
 			<ul>
-				<li class="section"><a href="{{ url('/dashboard/home')}}"><span class="icon">&#128711;</span> Dashboard</a></li>
-				<li><a href="{{ url('/dashboard/pendanaan')}}/{{ Auth::user()->id }}"><span class="icon">&#127758;</span> Pendanaan</a></li>
-				<li><a href="{{ url('/dashboard/laporan')}}/{{ Auth::user()->id }}"><span class="icon">&#128203;</span> Laporan</a></li>
-				<li><a href="{{ url('/dashboard/pengaturan')}}"><span class="icon">&#9881;</span>Pengaturan</a></li>
+				<li class="section"><a href="{{ url('/dashboard/home')}}"> Crowdfunding</a>
+				<ul class="submenu">
+				<li><a href="{{ url('/dashboard/daftarpenggalangan')}}">Daftar Penggalangan Dana</a></li>
+				<li><a href="{{ url('/dashboard/listPenggalangan')}}">List Pendanaan UMKM</a></li>
+				<li><a href="{{ url('/dashboard/showReportPendanaan')}}">Laporan Crowdfunding</a></li>
+				</ul>
+			</li>
+				<li><a href="{{ url('/dashboard/pendanaan')}}/{{ Auth::user()->id }}"> Pendanaan</a></li>
+				<li><a href="{{ url('/dashboard/laporan')}}/{{ Auth::user()->id }}">Laporan</a></li>
+				<li><a href="{{ url('/dashboard/pengaturan')}}">Pengaturan</a></li>
 			</ul>
 			<br/><br/><center><img src="{{URL::to('/')}}../images/logo_white.png "/></center>
 		</nav>

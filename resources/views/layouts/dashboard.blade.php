@@ -58,7 +58,7 @@
 		</header>
 		<section class="user">
 			<div class="profile-img">
-				<p><img src="{{URL::to('dashboard/images/fotoprofile')}}/{{ Auth::user()->url_foto }}" alt="" height="40" width="40" /> Selamat Datang <strong>{{ Auth::user()->name }}</strong></p>
+				<p> Selamat Datang <strong>{{ Auth::user()->name }}</strong></p>
 			</div>
 			<div class="buttons">
 				<button class="ico-font">&#9206;</button>

@@ -10,10 +10,16 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+Route::get('/', function () {
+    return view('auth.login');
+});
 Route::auth();
 
 //Halaman Welcome
-Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
+//laporan bulanan
+Route::get('/dashboard/showReportPendanaan','crowdController@listReportCrowd');
+Route::get('/dashboard/pendanaan/{id}','crowdController@index');
+Route::get('/dashboard/showReportCrowdfunding','crowdController@showReport');
 
 
