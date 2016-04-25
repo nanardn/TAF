@@ -25,4 +25,7 @@ class User extends Authenticatable
     ];
 
     
+    public function pendanaan() {
+        return $this->hasMany(Pendanaan::class, 'id_umkm', 'id');
+    }
 }
