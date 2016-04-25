@@ -30,9 +30,7 @@ class crowdController extends Controller
         return view('dashboard.dashboard-reportpendanaan');
     }
     public function listReportCrowd(Request $request){
-    	$result = DB::select('SELECT * FROM laporan_crowd, pendanaan 
-            WHERE laporan_crowd.id_pendanaan=pendanaan.id_pendanaan');
-    	return view('dashboard.dashboard-reportpendanaan')->with('reportCrowd',$result)->with('campaigns', Auth::user()->pendanaan->pluck('nama_proyek', 'id_pendanaan'))->with('years', range(CrowdReport::first()->tahun, date('Y')));
+    	return view('dashboard.dashboard-reportpendanaan')->with('reportCrowd',Auth::user()->crowdReport)->with('campaigns', Auth::user()->pendanaan->pluck('nama_proyek', 'id_pendanaan'))->with('years', range(CrowdReport::first()->tahun, date('Y')));
     }
     public function detailReport(Request $req, $id)
     {

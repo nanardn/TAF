@@ -28,4 +28,8 @@ class User extends Authenticatable
     public function pendanaan() {
         return $this->hasMany(Pendanaan::class, 'id_umkm', 'id');
     }
+
+    public function crowdReport() {
+        return $this->hasManyThrough(CrowdReport::class, Pendanaan::class, 'id_umkm', 'id_pendanaan');
+    }
 }

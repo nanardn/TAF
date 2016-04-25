@@ -124,7 +124,7 @@
 						@foreach($reportCrowd as $rc)		
 						
 						<tr>
-							<td>{{$rc->nama_proyek}}</td>
+							<td>{{$rc->pendanaan->nama_proyek}}</td>
 							<td>{{date('F', mktime(0, 0, 0, $rc->bulan, 10))}}</td>
 							<td>{{$rc->tahun}}</td>
 							<td>{{$rc->total_pengeluaran}}</td>
